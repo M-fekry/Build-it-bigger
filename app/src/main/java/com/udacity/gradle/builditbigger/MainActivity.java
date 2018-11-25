@@ -40,8 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        //Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
-        EndpointAsyncTask endpointsAsyncTask = new EndpointAsyncTask();
+        EndpointsAsyncTask endpointsAsyncTask = new EndpointsAsyncTask();
         endpointsAsyncTask.execute(this);
     }
 
