@@ -19,14 +19,21 @@ import static org.junit.Assert.*;
 public class EndpointsAsyncTaskTest extends AndroidTestCase {
 
     @Test
-    public void connectedTestForAsyncTaskResponse() throws InterruptedException, ExecutionException, TimeoutException {
+    public void connectedTestForAsyncTaskResponse() {
 
+        try{
 
             EndpointsAsyncTask task = new EndpointsAsyncTask();
             task.execute();
             String joke = task.get(30, TimeUnit.SECONDS);
             assertNotNull(joke);
             assertTrue(joke.length() > 0);
+
+        }catch(Exception e) {
+
+            fail(e.getMessage());
+        }
+
 
 
 
